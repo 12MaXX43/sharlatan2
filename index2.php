@@ -1,7 +1,3 @@
-<?php
-    $randNumber = rand(1, 100);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>шарлатан2</h1>
-    <form action="index2.php" method="post">
+     <form action="" method="post" id="numb">
         <select name="number">
             <?php
-            for ($a = 1,$b = 10; $a <= 100; $a+=10, $b+=10) {
-                echo "<option value=" . $a . -$b . ">" . $a . -$b . "</option>";
+            for ($a = 1; $a <= 10; $a++) {
+                echo "<option value=" . $a . ">" . $a . "</option>";
             }
             ?>
         </select>
-        <button type="submit">qwerty</button>
     </form>
 </body>
 </html>
