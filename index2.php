@@ -13,7 +13,6 @@
     }else{
         $finish = (intval($randNumber / 10) + 1) * 10;
     }
-    var_dump($finish);
 ?>
 
 <!DOCTYPE html>
