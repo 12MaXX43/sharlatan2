@@ -16,7 +16,7 @@ if (intval($randNumber / 10) * 10 == $randNumber) { //провіряє нолі�
     $finish = (intval($randNumber / 10) + 1) * 10;
 }
 var_dump($randNumber);
-$_SESSION['start'] = $start;
+$_SESSION['start10'] = $start;
 ?>
 
 <!DOCTYPE html>

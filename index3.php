@@ -1,7 +1,7 @@
 <?php
 session_start();
 $randNumber1 = $_SESSION['randNumber'];
-$start10 = $_SESSION['start'];
+$start10 = $_SESSION['start10'];
 $middle = $start10 + 5;
 var_dump($randNumber1);
 if ($randNumber1 >= $middle) {
@@ -11,6 +11,8 @@ if ($randNumber1 >= $middle) {
     $start = $start10;
     $finish = ($start10 + 4);
 }
+$_SESSION['start5'] = $start;
+
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +26,8 @@ if ($randNumber1 >= $middle) {
 
 <body>
     <h2>loh</h2>
-    <form action="" method="post">
-        <select name="" id="">
+    <form action="index4.php" method="post">
+        <select name="chosenNumber" id="">
             <?php
             for ($a = $start; $a <= $finish; $a++) {
                 echo "<option value=" . $a . ">" . $a . "</option>";
