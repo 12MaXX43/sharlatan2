@@ -1,10 +1,12 @@
 <?php
 session_start();
+$_SESSION['score'] = 0;
 $randNumber = rand(1, 100);
 $_SESSION['randNumber'] = $randNumber;
 $range = explode('-', $_POST['number']);
 if ($range[0] <= $randNumber && $range[1] >= $randNumber) {
-    echo 'jh';
+    echo 'ne loh';
+    $_SESSION['score'] += 50;
 } else {
     echo '<h2>loh</h2>';
 }
@@ -15,7 +17,7 @@ if (intval($randNumber / 10) * 10 == $randNumber) { //провіряє нолі�
     $start = intval($randNumber / 10) * 10 + 1;
     $finish = (intval($randNumber / 10) + 1) * 10;
 }
-var_dump($randNumber);
+var_dump($randNumber, $_SESSION['score']);
 $_SESSION['start10'] = $start;
 ?>
 
@@ -38,6 +40,10 @@ $_SESSION['start10'] = $start;
             ?>
         </select>
         <button type="submit">asdfgh</button>
+    </form>
+
+    <form action="index.php">
+        <button type="submit">asfsdf</button>
     </form>
 </body>
 

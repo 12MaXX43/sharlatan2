@@ -1,9 +1,13 @@
 <?php
 session_start();
 $randNumber1 = $_SESSION['randNumber'];
+$chosenNumber = $_POST['number'];
 $start10 = $_SESSION['start10'];
 $middle = $start10 + 5;
-var_dump($randNumber1);
+if ($randNumber1 == $chosenNumber) {
+    $_SESSION['score'] += 50;
+    header('location: index5.php');
+}
 if ($randNumber1 >= $middle) {
     $start = ($start10 + 5);
     $finish = ($start10 + 9);
@@ -12,6 +16,7 @@ if ($randNumber1 >= $middle) {
     $finish = ($start10 + 4);
 }
 $_SESSION['start5'] = $start;
+var_dump($randNumber1);
 
 ?>
 
@@ -35,6 +40,10 @@ $_SESSION['start5'] = $start;
             ?>
         </select>
         <button type="submit">zxcvbn</button>
+    </form>
+
+    <form action="index.php">
+        <button type="submit">asfsdf</button>
     </form>
 </body>
 
