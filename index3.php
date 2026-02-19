@@ -16,8 +16,6 @@ if ($randNumber1 >= $middle) {
     $finish = ($start10 + 4);
 }
 $_SESSION['start5'] = $start;
-var_dump($randNumber1);
-
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +29,7 @@ var_dump($randNumber1);
 
 <body>
     <h2>loh</h2>
+    <h3>вгадай число</h3>
     <form action="index4.php" method="post">
         <select name="chosenNumber" id="">
             <?php
@@ -39,11 +38,11 @@ var_dump($randNumber1);
             }
             ?>
         </select>
-        <button type="submit">zxcvbn</button>
+        <button type="submit">угадать</button>
     </form>
 
     <form action="index.php">
-        <button type="submit">asfsdf</button>
+        <button type="submit">вернуться</button>
     </form>
 </body>
 

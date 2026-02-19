@@ -9,6 +9,7 @@
 
 <body>
     <h1>шарлатан2</h1>
+    <h2>вгадай діапазон</h2>
     <form action="index2.php" method="post">
         <select name="number">
             <?php
@@ -17,7 +18,7 @@
             }
             ?>
         </select>
-        <button type="submit">qwerty</button>
+        <button type="submit">угадать</button>
     </form>
 </body>
 

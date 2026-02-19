@@ -17,7 +17,6 @@ if (intval($randNumber / 10) * 10 == $randNumber) { //провіряє нолі�
     $start = intval($randNumber / 10) * 10 + 1;
     $finish = (intval($randNumber / 10) + 1) * 10;
 }
-var_dump($randNumber, $_SESSION['score']);
 $_SESSION['start10'] = $start;
 ?>
 
@@ -31,6 +30,7 @@ $_SESSION['start10'] = $start;
 </head>
 
 <body>
+    <h2>вгадай число</h2>
     <form action="index3.php" method="post" id="numb">
         <select name="number">
             <?php
@@ -39,11 +39,11 @@ $_SESSION['start10'] = $start;
             }
             ?>
         </select>
-        <button type="submit">asdfgh</button>
+        <button type="submit">угадать</button>
     </form>
 
     <form action="index.php">
-        <button type="submit">asfsdf</button>
+        <button type="submit">вернуться</button>
     </form>
 </body>
 
